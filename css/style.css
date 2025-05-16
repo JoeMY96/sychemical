@@ -65,6 +65,15 @@ body{
 	padding: 1.7em 0 1.5em 0;
 	background: #F6F6F6;
 }
+.logo {
+    background: linear-gradient(to right, #0066cc, #0099ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+	font-size: 40px;  /* 更大的字号 */
+    font-weight: 700;  /* 更粗的字体 */
+    color: #004080;   /* 更深的商务蓝 */
+    color: transparent;
+}
 .logo{
 	float:left;
 }
