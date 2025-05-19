@@ -1043,3 +1043,25 @@ body{
 	text-overflow: ellipsis;  /* 超出加省略号（可选） */
   }
   
+  /* 新增：一分为二的栅格 */
+.span_1_of_2 {
+	float: left;
+	width: 48%;      /* 两列合计 96% 宽度 */
+	margin-right: 4%;/* 每列间留 4% 间隙 */
+	box-sizing: border-box;
+  }
+  
+  /* 去掉最后一列多余的右边距 */
+  .span_1_of_2:last-child {
+	margin-right: 0;
+  }
+  
+  /* 保证在小屏下变成单列 */
+  @media only screen and (max-width: 640px) {
+	.span_1_of_2 {
+	  width: 100%;
+	  margin-right: 0;
+	  margin-bottom: 20px; /* 行间距 */
+	}
+  }
+  
