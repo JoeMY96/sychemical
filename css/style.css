@@ -997,3 +997,49 @@ body{
 		padding: 1em 2.4em;
 	}
 }
+/* 1. about-section：限制最大宽度、水平居中 */
+.about-section {
+	max-width: 800px;      /* 根据需要调整最大宽度 */
+	margin: 0 auto;        /* 水平居中 */
+	padding: 40px 0;       /* 上下留白，可自行调整 */
+  }
+  
+  /* 2. about-title：占满父容器顶部并水平居中 */
+  .about-title {
+	width: 100%;
+	text-align: center;
+	font-size: 2em;             /* 按需调整 */
+	text-transform: uppercase;
+	margin-bottom: 1em;         /* 标题与网格的间距 */
+	color: #007DAD;             /* 你的主题色 */
+  }
+  
+  /* 3. about-grid：2×2 固定 Grid 布局 */
+  .about-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* 两列 */
+	grid-auto-rows: auto;                  /* 高度自适应 */
+	gap: 20px;                             /* 卡片间距 */
+  }
+  
+  /* 4. 取消旧浮动，避免冲突 */
+  .about-topgrid1 {
+	float: none !important;
+	width: auto !important;
+	margin: 0 !important;
+  }
+  
+  /* 5. 小屏时单列 */
+  @media only screen and (max-width: 600px) {
+	.about-grid {
+	  grid-template-columns: 1fr;  /* 改成一列 */
+	}
+  }
+  
+  /* 取消卡片标题自动换行，超出宽度时一行展示 */
+.about-topgrid1 h3 {
+	white-space: nowrap;      /* 不换行 */
+	overflow: hidden;         /* 隐藏溢出文本 */
+	text-overflow: ellipsis;  /* 超出加省略号（可选） */
+  }
+  
